@@ -5,7 +5,6 @@
 - 使用Spring Boot, Spring JPA实现底层服务的CRUD 
 - 单元测试，API测试 
 - 符合RESTful API规范 
-- 实现webservice接口查询订单
 - 实现服务注册发现组件
 - 实现服务网关组件
 - 实现服务的高可用
@@ -26,6 +25,14 @@
 - [基于ACCESS TOKEN的权限解决方案](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/other/access_token.md)
 - [集成redis做缓存](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/redis/redis_cache.md)
 - [修改github上仓库的项目语言](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/other/github_language.md)
+## 开发环境及项目框架介绍
+* IDE:Intellij IDEA
+* 缓存服务器(数据库):Redis
+* 数据库:MySQL
+([数据库代码dbkeda.sql](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web/src/main/resources/static/db/dbkeda.sql))
+* 代码管理:Git
+* 项目框架:Spring Boot + Spring Cloud
+
 ## 服务介绍
 * api-gateway:服务网关
 * eureka-server:服务注册中心
@@ -36,7 +43,7 @@
 * web:web服务
 ## 演示步骤
 - 1、开启Redis和MySQL服务
-- 2、分别启动：EurekaServerApplication、ApiGatewayApplication、ConfigServerGitApplication、CategoryApplication、OrderApplication、UserApplication、KedaApplication
+- 2、分别启动各个微服务：EurekaServerApplication、ApiGatewayApplication、ConfigServerGitApplication、CategoryApplication、OrderApplication、UserApplication、KedaApplication
 - 3、首页界面地址：http://localhost:8080/web
 - 4、登录界面地址：http://localhost:8080/web/login.html
 - 5、注册界面地址：http://localhost:8080/web/register.html

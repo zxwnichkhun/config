@@ -145,5 +145,5 @@ CREATE TABLE `user` (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('2', '苏雄伟', '123456', '18361246696', '苏州科达');
+INSERT INTO `user` VALUES ('2', '苏雄伟', '123456', '18361248888', '苏州科达');
 INSERT INTO `user` VALUES ('3', 'test', '123456', '18361222222', '科达');
