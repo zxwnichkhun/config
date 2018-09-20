@@ -25,6 +25,7 @@
 - [基于ACCESS TOKEN的权限解决方案](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/other/access_token.md)
 - [集成redis做缓存](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/redis/redis_cache.md)
 - [修改github上仓库的项目语言](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/other/github_language.md)
+- [@RequestBody](https://github.com/suxiongwei/suxiongwei.github.io/blob/master/article/spring/%40RequestBody.md)
 ## 开发环境及项目框架介绍
 * IDE:Intellij IDEA
 * 缓存服务器(数据库):Redis
