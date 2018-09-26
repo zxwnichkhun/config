@@ -28,6 +28,7 @@
 - [@RequestBody](https://github.com/suxiongwei/suxiongwei.github.io/blob/master/article/spring/%40RequestBody.md)
 - [springboot自定义控制台输出](https://github.com/suxiongwei/suxiongwei.github.io/blob/master/article/spring/springboot_banner_text.md)
 - [SpringBoot项目在IntelliJ IDEA中实现热部署](https://www.cnblogs.com/winner-0715/p/6666579.html)
+- [Java 微服务框架选型（Dubbo 和 Spring Cloud？）](https://www.cnblogs.com/xishuai/archive/2018/04/13/dubbo-and-spring-cloud.html)
 ## 开发环境及项目框架介绍
 * IDE:Intellij IDEA
 * 缓存服务器(数据库):Redis
