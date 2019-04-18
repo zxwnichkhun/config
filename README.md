@@ -56,3 +56,9 @@
 - [Spring Boot基础教程](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)
 - [Spring-Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/ )
 
+## 感谢
+本项目是本人在实习期考核的项目，不是很完善，但还是收到了很多朋友的Star，十分感谢。
+
+工作中使用SpringBoot其它的记录，请移步[gitpress博客](https://gitpress.io/c/springboot/)或者[SpringBoot文章列表](https://github.com/suxiongwei/blog/tree/master/SpringBoot)
+
+
