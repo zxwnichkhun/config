@@ -11,13 +11,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
-/**
- * 实习期考核项目
- * com.kedacom.order.service.impl
- * 2018-01-02-13:44
- * 2018科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2018-01-02.
- */
 @Service
 public class OrderServiceImpl implements OrderService {
 

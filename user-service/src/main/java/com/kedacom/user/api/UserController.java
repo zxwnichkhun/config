@@ -20,13 +20,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.net.URI;
 
-/**
- * 实习期考核项目
- * com.kedacom.user.api
- * 2017-12-29-13:09
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-29.
- */
 @RestController
 @RequestMapping("/user")
 public class UserController {

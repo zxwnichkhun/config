@@ -7,13 +7,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
-/**
- * 实习期考核项目
- * com.kedacom.goods.model
- * 2017-12-28-15:29
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-28.
- */
 @Entity
 public class Category implements Serializable {
 

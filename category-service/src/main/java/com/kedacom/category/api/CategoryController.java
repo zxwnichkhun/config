@@ -18,13 +18,6 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
-/**
- * 实习期考核项目
- * com.kedacom.goods.api
- * 2017-12-28-15:04
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-28.
- */
 @RestController
 @RequestMapping("/category")
 public class CategoryController {

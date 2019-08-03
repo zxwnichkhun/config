@@ -8,13 +8,6 @@ import org.slf4j.LoggerFactory;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-/**
- * 实习期考核项目
- * com.kedacom.apigateway
- * 2017-12-27-13:29
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-27.
- */
 //Zuul过滤器,在实现了自定义过滤器之后，它并不会直接生效，我们还需要为其创建具体的Bean才能启动该过滤器(应用主类中创建)
 //可定义一些与业务无关的通用逻辑实现对请求的过滤和拦截，比如：签名校验、权限校验、请求限流等功能。
 public class AccessFilter extends ZuulFilter{

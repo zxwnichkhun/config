@@ -1,12 +1,5 @@
 package com.kedacom.commons.api;
 
-/**
- * 实习期考核项目
- * com.kedacom.keda.model
- * 2017-12-26-18:30
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-26.
- */
 public class Result<T> {
 
     private Integer code;

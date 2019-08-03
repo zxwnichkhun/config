@@ -5,13 +5,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-/**
- * 实习期考核项目
- * com.kedacom.model
- * 2018-01-02-13:35
- * 2018科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2018-01-02.
- */
 @Entity
 public class Order implements Serializable {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

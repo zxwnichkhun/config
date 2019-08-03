@@ -12,7 +12,7 @@
 
 
 	<parent>
-		<artifactId>keda</artifactId>
+		<artifactId>SpringCloud-Shop</artifactId>
 		<groupId>com.kedacom</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
@@ -27,6 +27,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<dependencies>
+		<!-- spring boot实现Java Web服务-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
@@ -37,45 +43,11 @@
 			<artifactId>spring-cloud-starter-zuul</artifactId>
 		</dependency>
 
-		<!-- spring boot实现Java Web服务-->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-
-
-		<!--<dependency>-->
-			<!--<artifactId>user-service</artifactId>-->
-			<!--<groupId>com.kedacom</groupId>-->
-			<!--<version>0.0.1-SNAPSHOT</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<artifactId>order-service</artifactId>-->
-			<!--<groupId>com.kedacom</groupId>-->
-			<!--<version>0.0.1-SNAPSHOT</version>-->
-		<!--</dependency>-->
-
-		<!--<dependency>-->
-			<!--<artifactId>category-service</artifactId>-->
-			<!--<groupId>com.kedacom</groupId>-->
-			<!--<version>0.0.1-SNAPSHOT</version>-->
-		<!--</dependency>-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-feign</artifactId>
 		</dependency>
 
-		<dependency>
-			<artifactId>commons</artifactId>
-			<groupId>com.kedacom</groupId>
-			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.session</groupId>
-			<artifactId>spring-session-data-redis</artifactId>
-		</dependency>
 	</dependencies>
 
 	<dependencyManagement>

@@ -2,13 +2,6 @@ package com.kedacom.commons.model;
 
 import java.io.Serializable;
 
-/**
- * 实习期考核项目
- * com.kedacom.model
- * 2017-12-29-13:03
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-29.
- */
 public class User implements Serializable {
 
     private Long id;

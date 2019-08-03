@@ -6,13 +6,6 @@ package com.kedacom.apigateway.config;
 //import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 //import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
-/**
- * 销售管理系统
- * com.kedacom.keda.config
- * 2018-01-11-13:43
- * 2018科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2018-01-11.
- */
 //@EnableWebSecurity
 public class SecurityConfig  {//extends WebSecurityConfigurerAdapter
     // @formatter:off

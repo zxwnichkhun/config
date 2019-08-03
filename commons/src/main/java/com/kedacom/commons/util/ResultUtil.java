@@ -2,13 +2,6 @@ package com.kedacom.commons.util;
 
 import com.kedacom.commons.api.Result;
 
-/**
- * 实习期考核项目
- * com.kedacom.keda.utils
- * 2017-12-26-18:33
- * 2017科达科技股份有限公司-版权所有
- * Created by suxiongwei on 2017-12-26.
- */
 public class ResultUtil {
 
     public static Result success(Object object){
