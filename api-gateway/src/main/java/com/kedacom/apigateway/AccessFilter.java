@@ -53,14 +53,14 @@ public class AccessFilter extends ZuulFilter{
         if(!flag){
 //            Object accessToken = request.getParameter("accessToken");//http://localhost:8764/eureka-provider/index?accessToken=token
 
-//            Long userId = (Long) session.getAttribute("userId");
+            Long userId = (Long) session.getAttribute("userId");
 
-            Long userId = 1L;//目前没有将登录验证功能集成到API网关层，因此需要手写ID
+//            Long userId = 1L;//目前没有将登录验证功能集成到API网关层，因此需要手写ID
             if(userId == null) {
                 logger.warn("userId is empty");
                 ctx.setSendZuulResponse(false);
                 ctx.setResponseStatusCode(401);
-                ctx.setResponseBody("您还没有登录");
+                ctx.setResponseBody("not login");
                 return null;
             }
 

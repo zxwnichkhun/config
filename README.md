@@ -35,7 +35,7 @@
 
 - 接口访问示例
 
-  - 查看商品详情：http://localhost:8080/web-app/category/introduction/1
+  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1
 
     返回Json
 
@@ -79,8 +79,18 @@
         }
     }
     ```
-
     
+  - 用户服务-登录功能[POST]：http://localhost:8080/web-app/users/login?name=admin&password=123456
+
+    返回Json
+
+    ```json
+   {
+        "code": 0,
+        "msg": "成功",
+        "data": null
+    }
+    ```
 
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)

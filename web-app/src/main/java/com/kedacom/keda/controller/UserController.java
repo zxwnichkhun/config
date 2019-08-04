@@ -44,7 +44,7 @@ public class UserController{
 
     @PostMapping("/register")
     @ResponseBody
-    public Result register(User user,Map<String, Object> model) {
+    public Result register(User user) {
         if(userService.register(user)){
             return ResultUtil.success();
         }else{
