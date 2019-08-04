@@ -17,13 +17,17 @@
 * 项目框架:Spring Boot + Spring Cloud
 
 ## 服务介绍
-* api-gateway:服务网关
-* eureka-server:服务注册中心
-* config-server:分布式配置中心
-* category-service:商品服务
-* order-service:订单服务
-* user-service:用户服务
-* web-app:web服务
+
+| 服务             | 描述           |
+| ---------------- | -------------- |
+| api-gateway      | 服务网关       |
+| eureka-server    | 服务注册中心   |
+| config-server    | 分布式配置中心 |
+| category-service | 商品服务       |
+| order-service    | 订单服务       |
+| user-service     | 用户服务       |
+| web-app          | web服务        |
+
 ## 演示步骤
 - 1、开启Redis和MySQL服务
 
