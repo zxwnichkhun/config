@@ -5,7 +5,9 @@ spring:
     name: category-service
   cloud:
     config:
-      uri: http://localhost:8764/CONFIG-SERVER/
+      discovery:
+        serviceId: config-server
+        enabled: true
       profile: default
       label: master
 
