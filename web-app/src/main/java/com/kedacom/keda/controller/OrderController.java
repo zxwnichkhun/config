@@ -18,7 +18,7 @@ public class OrderController{
     @PostMapping("/addOrder")
     public Result addOrder(OrderVo orderVo,HttpSession session) {
         Long userId= (Long) session.getAttribute("userId");
-        if(userId==null){
+        if(userId == null){
             return ResultUtil.error(3,"你还未登录");
         }else{
             orderVo.setUserId(userId);

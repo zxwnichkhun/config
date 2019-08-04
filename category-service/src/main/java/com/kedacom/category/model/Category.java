@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Entity
+@Table(name = "category")
 public class Category implements Serializable {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)

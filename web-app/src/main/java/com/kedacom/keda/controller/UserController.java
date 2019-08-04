@@ -28,20 +28,15 @@ public class UserController{
     /**
      * 用户登录
      * @param user
-     * @param model
      * @return
      */
     @PostMapping("/login")
     @ResponseBody
-    public Result login(User user,Model model,HttpSession session) {
+    public Result login(User user,HttpSession session) {
         User u = userService.login(user);
         if(u.getPassword().equals(user.getPassword())){
             session.setAttribute("userId",u.getId());
             session.setAttribute("userName",u.getName());
-
-            Category category = categoryService.getCategory(1L);
-            // 楼层
-            model.addAttribute("category", category);
             return ResultUtil.success();
         }
         return ResultUtil.error(2,"用户名或密码有误");
@@ -51,9 +46,6 @@ public class UserController{
     @ResponseBody
     public Result register(User user,Map<String, Object> model) {
         if(userService.register(user)){
-            Category category = categoryService.getCategory(1L);
-            // 楼层
-            model.put("category", category);
             return ResultUtil.success();
         }else{
             return ResultUtil.error(2,"注册失败");
