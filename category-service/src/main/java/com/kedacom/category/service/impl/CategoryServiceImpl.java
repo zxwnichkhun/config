@@ -13,11 +13,11 @@ import java.util.List;
 public class CategoryServiceImpl implements CategoryService {
 
     @Autowired
-    private CategoryRepository goodRepository;
+    private CategoryRepository categoryRepository;
 
     @Override
     public Category findOne(Long id) {
-        Category category = goodRepository.findOne(id);
+        Category category = categoryRepository.findOne(id);
         if (category == null)
             throw new ResourceNotFoundException(id);
         return category;
@@ -25,11 +25,11 @@ public class CategoryServiceImpl implements CategoryService {
 
     @Override
     public List<Category> findByLevelAndName(Integer level, String name) {
-        return goodRepository.findByLevelAndName(level, name);
+        return categoryRepository.findByLevelAndName(level, name);
     }
 
     @Override
     public Category save(Category category) {
-        return goodRepository.save(category);
+        return categoryRepository.save(category);
     }
 }

@@ -20,7 +20,7 @@ public class CategoryController {
     @Autowired CategoryService categoryService;
 
     @GetMapping("/introduction/{id}")
-    public Result home(Map<String, Object> model, @PathVariable long id) {
+    public Result home(@PathVariable long id) {
         Category category = categoryService.getCategory(id);
         return ResultUtil.success(category);
     }
