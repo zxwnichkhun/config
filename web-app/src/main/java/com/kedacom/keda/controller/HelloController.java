@@ -12,14 +12,11 @@ import org.springframework.web.bind.annotation.*;
  * Created by 苏雄伟 on 2017/12/25.
  */
 
-@Component
-@RestController
+@Controller
 public class HelloController {
     @RequestMapping("/test")
-    public String index(ModelMap map) {
-        // 加入一个属性，用来在模板中读取
-        map.addAttribute("host", "http://blog.didispace.com");
-        // return模板文件的名称，对应src/main/resources/templates/index.html
+    @ResponseBody
+    public String index() {
         return "test";
     }
 }
