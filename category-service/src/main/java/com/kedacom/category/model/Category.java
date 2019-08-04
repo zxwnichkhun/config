@@ -19,7 +19,10 @@ public class Category implements Serializable {
      */
     private Integer level;
 
-    @Column(name = "parent_id") private Long parentId; // childs建立映射时默认使用的是主键id，而主键是Long，对应bigint，parentId如果是String则对应VARCHAR(255)，两个类型不一样，因此无法建立外键约束成功
+    /**
+     * childs建立映射时默认使用的是主键id，而主键是Long，对应bigint，parentId如果是String则对应VARCHAR(255)，两个类型不一样，因此无法建立外键约束成功
+     */
+    @Column(name = "parent_id") private Long parentId;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.PERSIST) @JoinColumn(name = "parent_id") @OrderBy(value = "order_number ASC") private List<Category> childs;
 
