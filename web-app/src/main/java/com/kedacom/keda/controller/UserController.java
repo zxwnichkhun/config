@@ -9,6 +9,7 @@ import com.kedacom.user.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -51,6 +52,14 @@ public class UserController{
             return ResultUtil.error(2,"注册失败");
         }
     }
+
+    @GetMapping("/get_session")
+    public Result getSession(HttpSession session) {
+        int id = (int) session.getAttribute("userId");
+        return ResultUtil.success(session.getAttribute("userId"));
+    }
+
+
 }
 
 
