@@ -17,13 +17,13 @@
 * 项目框架:Spring Boot + Spring Cloud
 
 ## 服务介绍
-- api-gateway      | 服务网关       
-- eureka-server    | 服务注册中心   
-- config-server    | 分布式配置中心 
-- category-service | 商品服务       
-- order-service    | 订单服务       
-- user-service     | 用户服务       
-- web-app          | web服务        
+- api-gateway      : 服务网关       
+- eureka-server    : 服务注册中心   
+- config-server    : 分布式配置中心 
+- category-service : 商品服务       
+- order-service    : 订单服务       
+- user-service     : 用户服务       
+- web-app          : web服务        
 
 ## 演示步骤
 - 1、开启Redis和MySQL服务
@@ -32,7 +32,7 @@
 
 - 接口访问示例
 
-  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1
+  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1?accessToken=test
 
     返回Json
 
@@ -88,6 +88,18 @@
         "data": null
       }
     ```
+	- 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/addOrder?categoryId=1&summoney=10.0&accessToken=test
+
+    返回Json
+
+    ```json
+      {
+        "code": 0,
+        "msg": "成功",
+        "data": null
+      }
+    ```
+	- 其它的服务参见代码路由，在这里不再赘述
 
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)

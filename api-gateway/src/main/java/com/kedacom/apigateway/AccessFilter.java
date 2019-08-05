@@ -38,10 +38,6 @@ public class AccessFilter extends ZuulFilter{
     @Override public Object run() {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletRequest request = ctx.getRequest();
-        HttpSession session = ctx.getRequest().getSession();
-        String sessionId = session.getId();
-        ctx.addZuulRequestHeader("Cookie", "SESSION=" + sessionId);
-
         logger.info("send {} request to {}", request.getMethod(), request.getRequestURL().toString());
 
         /** 默认用户没有登录 */
@@ -57,21 +53,16 @@ public class AccessFilter extends ZuulFilter{
         }
 
         if(!flag){
-//            Object accessToken = request.getParameter("accessToken");//http://localhost:8764/eureka-provider/index?accessToken=token
+            Object accessToken = request.getParameter("accessToken");
 
-//            Long userId = (Long) session.getAttribute("userId");
-
-            // 目前没有将登录验证功能集成到API网关层，因此手写ID绕过验证
-            Long userId = 1L;
-            if(userId == null) {
-                logger.warn("userId is empty");
+            if(accessToken == null) {
+                logger.warn("access token is empty");
                 ctx.setSendZuulResponse(false);
                 ctx.setResponseStatusCode(401);
-                ctx.setResponseBody("not login");
                 return null;
             }
 
-            logger.info("userId ok");
+            logger.info("accessToken ok");
             //路由转发
             ctx.setSendZuulResponse(true);
             ctx.setResponseStatusCode(200);
