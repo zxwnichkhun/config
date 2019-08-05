@@ -100,8 +100,8 @@
         "data": null
       }
     ```
-
-	- 其它的服务参见代码路由，在这里不再赘述
+    
+  - 其它的服务参见代码路由，在这里不再赘述
 
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)
