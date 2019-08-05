@@ -95,5 +95,19 @@
 - [Spring Boot基础教程](http://blog.didispace.com/Spring-Boot%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/)
 - [Spring-Cloud基础教程](http://blog.didispace.com/Spring-Cloud%E5%9F%BA%E7%A1%80%E6%95%99%E7%A8%8B/ )
 
+## 更新日志
+### 2019-08-05
+
+#### 变更
+
+* 重新维护项目，将配置文件拆分到单独的配置中心仓库中去
+* 去除视图组件，通过REST URL调用（推介[Postman](https://www.getpostman.com/)进行测试）
+
+#### 修复
+
+* 修复依赖无法加载的问题
+
+
+
 ## 感谢
 本项目是本人在实习期考核的项目，不是很完善，但还是收到了很多朋友的Star，十分感谢。
