@@ -10,11 +10,11 @@
 - 实现服务的高可用
 
 ## 开发环境及项目框架介绍
-* IDE:Intellij IDEA
-* 缓存服务器(数据库):Redis
-* 数据库:MySQL([数据库代码dbkeda.sql](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web/src/main/resources/static/db/dbkeda.sql))
-* 代码管理:Git
-* 项目框架:Spring Boot + Spring Cloud
+* IDE: Intellij IDEA
+* 缓存服务器(数据库): Redis
+* 数据库: MySQL([数据库代码dbkeda.sql](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web/src/main/resources/static/db/dbkeda.sql))
+* 代码管理: Git
+* 项目框架: Spring Boot + Spring Cloud
 
 ## 服务介绍
 - api-gateway      : 服务网关       
@@ -88,7 +88,8 @@
         "data": null
       }
     ```
-	- 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/addOrder?categoryId=1&summoney=10.0&accessToken=test
+
+  - 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/addOrder?categoryId=1&summoney=10.0&accessToken=test
 
     返回Json
 
@@ -99,6 +100,7 @@
         "data": null
       }
     ```
+
 	- 其它的服务参见代码路由，在这里不再赘述
 
 ## 学习记录
