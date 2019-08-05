@@ -14,10 +14,4 @@ import java.util.List;
 @Repository
 public interface CategoryRepository extends JpaRepository<Category,Long> {
     Category findByName(String name);
-
-    //    List<Category> findByParentId(Long parentId);
-    //
-    //    List<Category> findByLevel(Integer level);
-
-    List<Category> findByLevelAndName(Integer level, String name);
 }

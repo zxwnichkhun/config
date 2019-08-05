@@ -1,12 +1,11 @@
 package com.kedacom.order.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * 开启spring session支持
  */
 @Configuration
-@EnableRedisHttpSession
+//@EnableRedisHttpSession
 public class RedisSessionConfig {
 }

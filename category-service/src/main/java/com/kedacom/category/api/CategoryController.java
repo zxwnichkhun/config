@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -66,7 +67,9 @@ public class CategoryController {
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public List<Category> categories(@RequestParam(value = "level", defaultValue = "0") Integer level, @RequestParam(value = "name", defaultValue = "top") String name) {
         ServiceInstance instance = client.getLocalServiceInstance();
-        List<Category> categories = categoryService. findByLevelAndName(level, name);
+        List<Category> categories = new ArrayList<>(2);
+        categories.add(categoryService.findOne(1L));
+        categories.add(categoryService.findOne(2L));
         logger.info("/category, host:" + instance.getHost() + ", serviceId: " + instance.getServiceId() + ", category level: " + level + ", category name: " + name);
         return categories;
     }

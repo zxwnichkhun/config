@@ -54,6 +54,8 @@ public class AccessFilter extends ZuulFilter{
 
         if(!flag){
             Object accessToken = request.getParameter("accessToken");
+            // TODO accessToken 的获取及验证
+            accessToken = "test";
 
             if(accessToken == null) {
                 logger.warn("access token is empty");

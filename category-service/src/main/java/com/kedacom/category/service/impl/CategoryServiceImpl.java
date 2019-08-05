@@ -24,11 +24,6 @@ public class CategoryServiceImpl implements CategoryService {
     }
 
     @Override
-    public List<Category> findByLevelAndName(Integer level, String name) {
-        return categoryRepository.findByLevelAndName(level, name);
-    }
-
-    @Override
     public Category save(Category category) {
         return categoryRepository.save(category);
     }

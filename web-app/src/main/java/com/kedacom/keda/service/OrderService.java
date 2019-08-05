@@ -9,6 +9,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("order-service")
 public interface OrderService {
 
-    @PostMapping("/order/addOrder") boolean addOrder(@RequestBody OrderVo orderVo);
+    @PostMapping("/order/add") boolean add(@RequestBody OrderVo orderVo);
 
 }

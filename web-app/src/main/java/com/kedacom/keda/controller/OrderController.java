@@ -15,14 +15,17 @@ public class OrderController{
 
     @Autowired OrderService orderService;
 
-    @PostMapping("/addOrder")
+    @PostMapping("/add")
     public Result addOrder(OrderVo orderVo,HttpSession session) {
-        Long userId= (Long) session.getAttribute("userId");
+//        Long userId= (Long) session.getAttribute("userId");
+        // TODO 用户id的获取
+        Long userId= 1L;
+
         if(userId == null){
             return ResultUtil.error(3,"你还未登录");
         }else{
             orderVo.setUserId(userId);
-            orderService.addOrder(orderVo);
+            orderService.add(orderVo);
             return ResultUtil.success();
         }
     }

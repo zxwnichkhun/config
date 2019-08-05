@@ -18,7 +18,7 @@ public class OrderController {
 
     @Autowired DiscoveryClient discoveryClient;
 
-    @PostMapping("/addOrder")
+    @PostMapping("/add")
     public Boolean addOrder(@RequestBody OrderVo orderVo){
         orderService.save(orderVo);
         return true;

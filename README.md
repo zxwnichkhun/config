@@ -32,7 +32,7 @@
 
 - 接口访问示例
 
-  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1?accessToken=test
+  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1
 
     返回Json
 
@@ -42,45 +42,17 @@
         "msg": "成功",
         "data": {
             "id": 1,
-            "level": 1,
-            "parentId": null,
-            "childs": [
-                {
-                    "id": 2,
-                    "level": 1,
-                    "parentId": 1,
-                    "childs": [],
-                    "name": "ZEK 原味海苔",
-                    "orderNumber": 2,
-                    "price": 8.9,
-                    "img": "/eureka-web/img/cp2.jpg",
-                    "detail": "ZEK 原味海苔 详情"
-                },
-                {
-                    "id": 3,
-                    "level": 1,
-                    "parentId": 1,
-                    "childs": [],
-                    "name": "萨拉米 1+1小鸡腿",
-                    "orderNumber": 3,
-                    "price": 29.99,
-                    "img": "/eureka-web/img/cp.jpg",
-                    "detail": "萨拉米 1+1小鸡腿 详情"
-                }
-            ],
             "name": "海味",
-            "orderNumber": 1,
             "price": 29.99,
-            "img": "/eureka-web/img/cp.jpg",
             "detail": ""
         }
     }
     ```
     
   - 用户服务-登录功能[POST]：http://localhost:8080/web-app/users/login?name=admin&password=123456
-
+  
     返回Json
-
+  
     ```json
       {
         "code": 0,
@@ -88,11 +60,11 @@
         "data": null
       }
     ```
-
-  - 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/addOrder?categoryId=1&summoney=10.0&accessToken=test
-
+  
+  - 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/add?categoryId=1&summoney=10.0
+  
     返回Json
-
+  
     ```json
       {
         "code": 0,
@@ -100,8 +72,8 @@
         "data": null
       }
     ```
-
-	- 其它的服务参见代码路由，在这里不再赘述
+  
+  - 其它的服务参见代码路由，在这里不再赘述
 
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)
