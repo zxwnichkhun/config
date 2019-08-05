@@ -10,18 +10,18 @@
 - 实现服务的高可用
 
 ## 服务介绍
-- api-gateway      : 服务网关       
-- eureka-server    : 服务注册中心   
-- config-server    : 分布式配置中心 
-- category-service : 商品服务       
-- order-service    : 订单服务       
-- user-service     : 用户服务       
-- web-app          : web服务       
+- api-gateway : 	服务网关       
+- eureka-server : 	服务注册中心   
+- config-server  : 	分布式配置中心 
+- category-service :	 商品服务       
+- order-service : 	订单服务       
+- user-service  :	 用户服务       
+- web-app  :	 web服务       
 
 ## 开发环境及项目框架介绍
 - IDE: Intellij IDEA
 - 缓存服务器(数据库): Redis
-- 数据库: MySQL([数据库代码dbkeda.sql](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web/src/main/resources/static/db/dbkeda.sql))
+- 数据库: MySQL([数据库代码dbkeda.sql](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/dbkeda.sql))
 - 项目框架: Spring Boot + Spring Cloud
 
 ## 演示步骤

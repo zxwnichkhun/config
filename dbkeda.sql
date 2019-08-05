@@ -1,43 +1,21 @@
 /*
-Navicat MySQL Data Transfer
+ Navicat Premium Data Transfer
 
-Source Server         : localhost
-Source Server Version : 50627
-Source Host           : localhost:3306
-Source Database       : dbkeda
+ Source Server         : mysql本地数据库
+ Source Server Type    : MySQL
+ Source Server Version : 50724
+ Source Host           : localhost:3306
+ Source Schema         : dbkeda
 
-Target Server Type    : MYSQL
-Target Server Version : 50627
-File Encoding         : 65001
+ Target Server Type    : MySQL
+ Target Server Version : 50724
+ File Encoding         : 65001
 
-Date: 2018-01-04 10:47:20
+ Date: 05/08/2019 15:42:30
 */
 
-SET FOREIGN_KEY_CHECKS=0;
-
--- ----------------------------
--- Table structure for carousel
--- ----------------------------
-DROP TABLE IF EXISTS `carousel`;
-CREATE TABLE `carousel` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `body` varchar(255) DEFAULT NULL,
-  `href_uri` varchar(255) DEFAULT NULL,
-  `href_url` varchar(255) DEFAULT NULL,
-  `order_number` bigint(20) DEFAULT NULL,
-  `picture_uri` varchar(255) DEFAULT NULL,
-  `picture_url` varchar(255) DEFAULT NULL,
-  `used_for` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of carousel
--- ----------------------------
-INSERT INTO `carousel` VALUES ('1', 'banner2', '#', '#', '10', '/eureka-web/img/ad2.jpg', '/eureka-web/img/ad2.jpg', 'home');
-INSERT INTO `carousel` VALUES ('2', 'banner3', '#', '#', '2', '/eureka-web/img/ad3.jpg', '/eureka-web/img/ad3.jpg', 'home');
-INSERT INTO `carousel` VALUES ('3', 'banner4', '#', '#', '3', '/eureka-web/img/ad4.jpg', '/eureka-web/img/ad4.jpg', 'home');
-INSERT INTO `carousel` VALUES ('4', 'banner1', '#', '#', '4', '/eureka-web/img/ad1.jpg', '/eureka-web/img/ad1.jpg', 'home');
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
 -- ----------------------------
 -- Table structure for category
@@ -45,24 +23,20 @@ INSERT INTO `carousel` VALUES ('4', 'banner1', '#', '#', '4', '/eureka-web/img/a
 DROP TABLE IF EXISTS `category`;
 CREATE TABLE `category` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `level` int(11) DEFAULT NULL,
   `name` varchar(20) NOT NULL,
-  `order_number` bigint(20) DEFAULT NULL,
-  `parent_id` bigint(20) DEFAULT NULL,
   `price` decimal(10,2) DEFAULT NULL,
-  `img` varchar(255) DEFAULT NULL,
   `detail` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `FKpqbj33aij72uwx8rwt086hvq2` (`parent_id`),
-  CONSTRAINT `FKpqbj33aij72uwx8rwt086hvq2` FOREIGN KEY (`parent_id`) REFERENCES `category` (`id`)
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of category
 -- ----------------------------
-INSERT INTO `category` VALUES ('1', '1', '海味', '1', null, '29.99', '/eureka-web/img/cp.jpg', '');
-INSERT INTO `category` VALUES ('2', '1', 'ZEK 原味海苔', '2', '1', '8.90', '/eureka-web/img/cp2.jpg', 'ZEK 原味海苔 详情');
-INSERT INTO `category` VALUES ('3', '1', '萨拉米 1+1小鸡腿', '3', '1', '29.99', '/eureka-web/img/cp.jpg', '萨拉米 1+1小鸡腿 详情');
+BEGIN;
+INSERT INTO `category` VALUES (1, '海味', 29.99, '');
+INSERT INTO `category` VALUES (2, 'ZEK 原味海苔', 8.90, 'ZEK 原味海苔 详情');
+INSERT INTO `category` VALUES (3, '萨拉米 1+1小鸡腿', 29.99, '萨拉米 1+1小鸡腿 详情');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for order
@@ -75,15 +49,18 @@ CREATE TABLE `order` (
   `state` tinyint(4) NOT NULL COMMENT '订单状态',
   `user_id` bigint(20) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  CONSTRAINT `order_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  KEY `user_id` (`user_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of order
 -- ----------------------------
-INSERT INTO `order` VALUES ('9', '2018-01-03 16:59:50', '8.90', '0', '2');
-INSERT INTO `order` VALUES ('10', '2018-01-04 10:07:43', '8.90', '0', '2');
+BEGIN;
+INSERT INTO `order` VALUES (9, '2018-01-03 16:59:50', 8.90, 0, 2);
+INSERT INTO `order` VALUES (10, '2018-01-04 10:07:43', 8.90, 0, 2);
+INSERT INTO `order` VALUES (11, '2019-08-05 11:31:10', 10.00, 0, 2);
+INSERT INTO `order` VALUES (12, '2019-08-05 11:31:40', 10.00, 0, 2);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for order_category
@@ -97,37 +74,18 @@ CREATE TABLE `order_category` (
   `create_time` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   KEY `order_id` (`order_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `order_category_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `order` (`id`),
-  CONSTRAINT `order_category_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  KEY `category_id` (`category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of order_category
 -- ----------------------------
-INSERT INTO `order_category` VALUES ('5', '9', '2', '1', '2018-01-03 14:32:32');
-INSERT INTO `order_category` VALUES ('6', '10', '2', '1', '2018-01-04 10:07:43');
-
--- ----------------------------
--- Table structure for shopping_cart
--- ----------------------------
-DROP TABLE IF EXISTS `shopping_cart`;
-CREATE TABLE `shopping_cart` (
-  `id` bigint(20) NOT NULL,
-  `user_id` bigint(20) NOT NULL,
-  `category_id` bigint(20) NOT NULL,
-  `num` int(11) NOT NULL,
-  `create_time` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`id`),
-  KEY `user_id` (`user_id`),
-  KEY `category_id` (`category_id`),
-  CONSTRAINT `shopping_cart_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `shopping_cart_ibfk_2` FOREIGN KEY (`category_id`) REFERENCES `category` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of shopping_cart
--- ----------------------------
+BEGIN;
+INSERT INTO `order_category` VALUES (5, 9, 2, 1, '2018-01-03 14:32:32');
+INSERT INTO `order_category` VALUES (6, 10, 2, 1, '2018-01-04 10:07:43');
+INSERT INTO `order_category` VALUES (7, 11, 1, 1, '2019-08-05 11:31:11');
+INSERT INTO `order_category` VALUES (8, 12, 1, 1, '2019-08-05 11:31:40');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for user
@@ -140,10 +98,14 @@ CREATE TABLE `user` (
   `phone` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('2', '苏雄伟', '123456', '18361248888', '苏州科达');
-INSERT INTO `user` VALUES ('3', 'test', '123456', '18361222222', '科达');
+BEGIN;
+INSERT INTO `user` VALUES (2, 'admin', '123456', '18361248888', '北京');
+INSERT INTO `user` VALUES (3, 'test', '123456', '18361222222', '北京');
+COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
