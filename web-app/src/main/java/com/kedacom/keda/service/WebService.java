@@ -19,7 +19,6 @@ public class WebService {
 
     @HystrixCommand(fallbackMethod = "getCategoryFallback")
     public Category getCategory(Long id) {
-        //        System.out.println("getCategory");
         return restTemplate.getForEntity("http://CATEGORY-SERVICE/category/" + id, Category.class).getBody();
     }
 

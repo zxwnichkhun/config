@@ -24,6 +24,7 @@ public class RedisTokenManager implements TokenManager {
         redis.setKeySerializer (new JdkSerializationRedisSerializer());
     }
 
+    @Override
     public TokenModel createToken (long userId) {
         // 使用 uuid 作为源 token
         String token = UUID.randomUUID ().toString ().replace ("-", "");
@@ -33,6 +34,7 @@ public class RedisTokenManager implements TokenManager {
         return model;
     }
 
+    @Override
     public TokenModel getToken (String authentication) {
         if (authentication == null || authentication.length () == 0) {
             return null;
@@ -47,6 +49,7 @@ public class RedisTokenManager implements TokenManager {
         return new TokenModel (userId, token);
     }
 
+    @Override
     public boolean checkToken (TokenModel model) {
         if (model == null) {
             return false;
@@ -60,6 +63,7 @@ public class RedisTokenManager implements TokenManager {
         return true;
     }
 
+    @Override
     public void deleteToken (long userId) {
         redis.delete (userId);
     }

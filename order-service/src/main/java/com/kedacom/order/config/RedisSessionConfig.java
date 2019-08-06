@@ -3,9 +3,9 @@ package com.kedacom.order.config;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * 开启spring session支持
+ * spring session支持
+ * 暂时关闭 @EnableRedisHttpSession
  */
 @Configuration
-//@EnableRedisHttpSession
 public class RedisSessionConfig {
 }

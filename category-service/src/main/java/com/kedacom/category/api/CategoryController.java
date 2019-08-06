@@ -60,17 +60,14 @@ public class CategoryController {
 
     /**
      * 集合查询或其他操作都不是资源化的，而是行为化的，因此每种请求方法类型全部写到一个URI，通过查询参数控制行为，而不要每个行为都写一个方法/不同URI
-     * @param level
      * @param name
      * @return
      */
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public List<Category> categories(@RequestParam(value = "level", defaultValue = "0") Integer level, @RequestParam(value = "name", defaultValue = "top") String name) {
+    public List<Category> categories( @RequestParam(value = "name") String name) {
         ServiceInstance instance = client.getLocalServiceInstance();
-        List<Category> categories = new ArrayList<>(2);
-        categories.add(categoryService.findOne(1L));
-        categories.add(categoryService.findOne(2L));
-        logger.info("/category, host:" + instance.getHost() + ", serviceId: " + instance.getServiceId() + ", category level: " + level + ", category name: " + name);
+        List<Category> categories = categoryService.findByName(name);
+        logger.info("/category, host:" + instance.getHost() + ", serviceId: " + instance.getServiceId() + ",  category name: " + name);
         return categories;
     }
 

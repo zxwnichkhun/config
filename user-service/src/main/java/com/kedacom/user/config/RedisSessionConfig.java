@@ -1,13 +1,12 @@
 package com.kedacom.user.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 /**
  * 开启spring session支持
  */
 @Configuration
-@EnableRedisHttpSession
+//@EnableRedisHttpSession
 public class RedisSessionConfig {
     // Spring Session替换了默认的tomcat httpSession,测试共享session，
     // 访问http://localhost:8771/test/cookie?browser=chrome向web服务session中添加session key为 browser

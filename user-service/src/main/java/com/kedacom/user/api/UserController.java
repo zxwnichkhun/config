@@ -26,14 +26,8 @@ public class UserController {
 
     private Logger logger = LoggerFactory.getLogger(UserController.class);
 
-//    @Autowired
-//    private DiscoveryClient discoveryClient;
-
-    @Autowired
-    private UserService userService;
-
-    @Autowired
-    private DiscoveryClient client;
+    @Autowired private UserService userService;
+    @Autowired private DiscoveryClient client;
 
     @PostMapping(value = "/login")
     public User login(@RequestBody User user){

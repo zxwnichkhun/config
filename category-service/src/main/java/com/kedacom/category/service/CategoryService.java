@@ -10,4 +10,6 @@ public interface CategoryService {
     Category findOne(Long id);
 
     Category save(Category category);
+
+    List<Category> findByName(String name);
 }
