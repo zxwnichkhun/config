@@ -29,12 +29,16 @@
 
 - 2、分别启动各个微服务：EurekaServerApplication、ApiGatewayApplication、ConfigServerApplication、CategoryApplication、OrderApplication、UserApplication、WebApplication
 
-- 接口访问示例
+- 3、服务调用
 
-  - 商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1
+  - 方式一：运行单元测试[WebAppTest]()
 
+  - 方式二：通过Postman进行REST URL调用
+
+    商品服务-查看商品详情功能[GET]：http://localhost:8080/web-app/category/introduction/1
+  
     返回Json
-
+    
     ```json
     {
         "code": 0,
@@ -48,10 +52,10 @@
     }
     ```
     
-  - 用户服务-登录功能[POST]：http://localhost:8080/web-app/users/login?name=admin&password=123456
-  
+    用户服务-登录功能[POST]：http://localhost:8080/web-app/users/login?name=admin&password=123456
+    
     返回Json
-  
+    
     ```json
       {
         "code": 0,
@@ -59,20 +63,8 @@
         "data": null
       }
     ```
-  
-  - 订单服务-添加订单[POST]：http://localhost:8080/web-app/order/add?categoryId=1&summoney=10.0
-  
-    返回Json
-  
-    ```json
-      {
-        "code": 0,
-        "msg": "成功",
-        "data": null
-      }       
-    ```
-		
-  - 其它的接口参见代码路由，在这里不再赘述
+    
+    其它的接口参见代码路由，在这里不再赘述
 
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)
