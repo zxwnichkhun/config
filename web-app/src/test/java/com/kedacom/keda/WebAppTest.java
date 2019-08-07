@@ -20,6 +20,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+/**
+ * API测试
+ */
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = WebApplication.class)
 @WebAppConfiguration

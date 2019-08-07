@@ -3,7 +3,7 @@
 本项目内容基于Spring Boot、Spring Cloud开发。实现电商应用基础服务，包括用户服务，商品服务，订单服务,功能包括用户注册，用户鉴权，商品列表，商品详情，下单，查看订单列表，订单详情。
 
 - 使用Spring Boot, Spring JPA实现底层服务的CRUD 
-- 单元测试，API测试 
+- 单元测试，[API测试](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web-app/src/test/java/com/kedacom/keda/WebAppTest.java) 
 - 符合RESTful API规范 
 - 实现服务注册发现组件
 - 实现服务网关组件
@@ -31,7 +31,7 @@
 
 - 3、服务调用
 
-  - 方式一：运行单元测试[WebAppTest]()
+  - 方式一：运行单元测试[WebAppTest](https://github.com/suxiongwei/SpringCloud-Shop/blob/master/web-app/src/test/java/com/kedacom/keda/WebAppTest.java)
 
   - 方式二：通过Postman进行REST URL调用
 
@@ -69,10 +69,8 @@
 ## 学习记录
 - [微服务框架](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/micro_service.md)
 - [Spring Boot](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/spring_boot.md)
-- [Redis在Window 下的安装](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/redis/redis.md)
 - [Spring Session的集成](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/spring_session.md)
 - [Spring Boot配置事务管理](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/transactional.md)
-- [Spring Cloud:注册中心Eureka](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/eureka.md)
 - [Spring Cloud:负载均衡Ribbon](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/ribbon.md)
 - [Feign声明式服务调用](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/feign.md)
 - [Zuul实现微服务网关](https://github.com/suxiongwei/suxiongwei.github.io/tree/master/article/spring/zuul.md)
